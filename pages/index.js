@@ -1,7 +1,9 @@
+import {useState} from 'react';
+
 import Button from '../components/Button';
+import CarColorPicker from '../components/CarColorPicker';
 import Image from 'next/image';
 import Layout from '../components/Layout';
-import Swatch from '../components/Swatch';
 
 import { getAllVehicles, getAllColors } from '../lib/api';
 
@@ -13,8 +15,9 @@ export async function getStaticProps() {
   // The value of the `props` key will be
   //  passed to the `Home` component
   return {
-    props: {data,
-    colors
+    props: {
+      data,
+      colors
     }
   }
 }
@@ -23,16 +26,7 @@ const Homepage = ({data, colors}) => {
   //console.log({data});
   return <Layout>
     <h1>Homepage</h1>
-    <h2>Color Picker</h2>
-    <div>
-      Large image goes here
-    </div>
-    <ul>
-      {colors.map((color) => {
-        return <Swatch color={color}/>
-      })}
-    </ul>
-    <h3>Color name</h3>
+    <CarColorPicker colors={colors}/>
   </Layout>
 }
 export default Homepage
