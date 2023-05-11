@@ -21,7 +21,7 @@ const accounts = [
     {
         name: 'Youtube',
         slug: 'youtube',
-        url: 'https://www.youtube.com/users/Subaru'
+        url: 'https://www.youtube.com/user/Subaru'
     },
 ];
 
