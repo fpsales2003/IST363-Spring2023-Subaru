@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import FormGroup from './FormGroup';
 import Heading from './Heading';
-import Image from 'next/Image';
+import Image from 'next/image';
 import Label from './Label';
 import Select from './Select';
 

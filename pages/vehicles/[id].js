@@ -1,7 +1,5 @@
 import CallToAction from '../../components/CallToAction';
 import ColorPicker from '../../components/ColorPicker';
-import Footer from '../../components/Footer';
-import Image from 'next/image';
 import Container from '../../components/Container';
 import Layout from '../../components/Layout';
 import Showcase from '../../components/Showcase';
