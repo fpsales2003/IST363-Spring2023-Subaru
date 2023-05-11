@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import NavOverlay from './NavOverlay';
 import NavDesktop from './NavDesktop';
-import Button from './Button';
 import ButtonUI from './ButtonUI';
 import Link from 'next/link';
 import Logo from './Logo';
