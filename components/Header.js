@@ -1,24 +1,31 @@
 import { useState } from 'react';
 import NavOverlay from './NavOverlay';
+import NavDesktop from './NavDesktop';
 import Button from './Button';
+import ButtonUI from './ButtonUI';
+import Link from 'next/link';
+import Logo from './Logo';
+import styles from './header.module.scss';
 
-import styles from './header.module.css';
-
-const Header = ({children}) => {
+const Header = () => {
     const [isMenuVisible, setMenuVisible] = useState(false);
     return <header className={styles.header}>
-        <Button
-            label="Menu"
+        <Link href="/">
+            <Logo />
+        </Link>
+        <ButtonUI
+            icon="menu"
             clickHandler={() => {
                 setMenuVisible(true);
             }}
-        />
+        /> 
+        <NavDesktop />
         {isMenuVisible && 
             <NavOverlay closeHandler={() => {
                 setMenuVisible(false);
             }}
-        />}
-        {children}
+        />
+        }
     </header>
 }
 export default Header
